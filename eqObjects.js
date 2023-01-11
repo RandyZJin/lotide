@@ -30,7 +30,7 @@ const eqObjects = function(object1, object2) {
   for (let key in object1) {
     if (typeof object1[key] === "object" && !eqArrays(object1[key], object2[key])) {
       return false;
-    } else if (typeof object1[key] === "string" && object1[key] !== object2[key]) {
+    } else if (typeof object1[key] !== "object" && object1[key] !== object2[key]) {
       return false;
     }
   }
