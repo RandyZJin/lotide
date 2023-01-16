@@ -1,22 +1,6 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual')
 
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    console.log(`${array1} and ${array2} are identical!`);
-  } else {
-    console.log(`${array1} and ${array2} are not identical!`);
-  }
-};
 
 const without = function(source, itemsToRemove) {
   let removed = [];
@@ -42,6 +26,10 @@ assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
 const teams = ["Yankees", "Jays", "Orioles", "Rays", "Red Sox"];
 without(teams, ["Rays", "Red Sox"]);
 assertArraysEqual(teams, ["Yankees", "Jays", "Orioles", "Rays", "Red Sox"]);
+
+
+module.exports = without;
+
 
 
 

@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😀😀Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🙃🙃Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const findKeyByValue = function(database, criteria) {
   for (let key in database) {
@@ -47,3 +41,6 @@ const divisionChamps = {
 };
 assertEqual(findKeyByValue(divisionChamps, "Yankees"), "al_east");
 assertEqual(findKeyByValue(divisionChamps, "Blue Jays"), undefined);
+
+
+module.exports = findKeyByValue;
