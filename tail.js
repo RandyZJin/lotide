@@ -1,9 +1,10 @@
 const tail = function(array) {
-  let output = [];
-  for (let i = 1; i < array.length; i++) {
-    output.push(array[i]);
-  }
-  return output;
+  // let output = [];
+  // for (let i = 1; i < array.length; i++) {
+  //   output.push(array[i]);
+  // }
+  // return output;
+  return array.slice(1)
 };
 
-console.log(tail(['dollar']));
+module.exports = tail;
