@@ -17,26 +17,22 @@ const map = require('./map');
 const without = require('./without');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  takeUntil: takeUntil,
-  assertArraysEqual: assertArraysEqual,
-  assertObjectsEqual: assertObjectsEqual,
-  assertEqual: assertEqual,
-  countLetters: countLetters,
-  countOnly: countOnly,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  findKey: findKey,
-  findKeyByValue: findKeyByValue,
-  flatten: flatten,
-  letterPositions: letterPositions,
-  map: map,
-  without: without,
-
-
-
-
+  head,
+  tail,
+  middle,
+  takeUntil,
+  assertArraysEqual,
+  assertObjectsEqual,
+  assertEqual,
+  countLetters,
+  countOnly,
+  eqArrays,
+  eqObjects,
+  findKey,
+  findKeyByValue,
+  flatten,
+  letterPositions,
+  map,
+  without,
 
 };
